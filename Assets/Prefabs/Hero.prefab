@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 705734737558079320}
   - component: {fileID: 8808338469707268258}
   - component: {fileID: 4568893459176185751}
+  - component: {fileID: 7070329286307638603}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -153,3 +154,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.1, y: 0}
   m_Size: {x: 4, y: 4}
   m_Direction: 0
+--- !u!114 &7070329286307638603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957750096866975246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db97c7f89a0c04245bbb26a3f7f7538e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
