@@ -8,9 +8,17 @@ public class HeroMovement : MonoBehaviour
     public float MoveSpeed = 8.0f;
     private float inputAxis;
     private Vector2 velocity;
+
+    public float maxJumpHeight = 5f;
+    public float maxJumpTime = 1f;
+    public float jumpForce => (2f * maxJumpHeight) / (maxJumpTime / 2f);
+    public float gravity => (-2f * maxJumpHeight) / Mathf.Pow((maxJumpTime / 2f),2);
+
+    public bool grounded { get; private set; } 
+    public bool jumping{ get; private set; } 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>(); 
         camera = Camera.main;
     }
 
