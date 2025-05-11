@@ -3,7 +3,6 @@ using UnityEngine;
 public class HeroMovement : MonoBehaviour
 {
     private new Camera camera;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private new Rigidbody2D rigidbody;
     public float MoveSpeed = 8.0f;
     private float inputAxis;
@@ -25,6 +24,22 @@ public class HeroMovement : MonoBehaviour
     private void Update()
     {
         HorizontalMovement();
+
+        grounded = rigidbody.RayCast(Vector2.down);
+        if (grounded)
+        {
+            GroundedMovement();
+        }
+        ApplyGravity();
+    }
+
+    private void ApplyGravity()
+    {
+        bool falling = velocity.y < 0 || !Input.GetButton("Jump");
+        float multiplier = falling ? 20f : 5f;
+        velocity.y += gravity * multiplier * Time.deltaTime;
+
+        velocity.y = Mathf.Max(velocity.y, gravity/2f);
     }
 
     private void HorizontalMovement()
@@ -35,6 +50,16 @@ public class HeroMovement : MonoBehaviour
 
     }
 
+    private void GroundedMovement()
+    {
+        velocity.y = Mathf.Max(velocity.y, 0f);
+        jumping = velocity.y > 0f;
+        if (Input.GetButtonDown("Jump"))
+        {
+            velocity.y = jumpForce;
+            jumping = true;
+        }
+    }
     private void FixedUpdate()
     {
         Vector2 position = rigidbody.position;
@@ -42,7 +67,7 @@ public class HeroMovement : MonoBehaviour
 
         Vector2 leftEdge = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 rightEdge = camera.ScreenToWorldPoint(new Vector2(Screen.width,Screen.height));
-        position.x = Mathf.Clamp(position.x, leftEdge.x + 1.6f, rightEdge.x -1.6f);
+        position.x = Mathf.Clamp(position.x, leftEdge.x + 0.5f, rightEdge.x - 0.5f);
 
         rigidbody.MovePosition(position);
     }
