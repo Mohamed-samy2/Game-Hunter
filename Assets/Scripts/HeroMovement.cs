@@ -14,7 +14,8 @@ public class HeroMovement : MonoBehaviour
     public float gravity => (-2f * maxJumpHeight) / Mathf.Pow((maxJumpTime / 2f),2);
 
     public bool grounded { get; private set; } 
-    public bool jumping{ get; private set; } 
+    public bool jumping{ get; private set; }
+    public bool walking => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>(); 
@@ -48,12 +49,20 @@ public class HeroMovement : MonoBehaviour
         //velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MoveSpeed, MoveSpeed * Time.deltaTime);  if we want deceleration 
         velocity.x = inputAxis * MoveSpeed;
 
+        if (velocity.x > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
+        else if (velocity.x < 0f)
+        {
+            transform.eulerAngles = new Vector3(0f,180f,0f);
+        }
     }
 
     private void GroundedMovement()
     {
         velocity.y = Mathf.Max(velocity.y, 0f);
-        jumping = velocity.y > 0f;
+        jumping = velocity.y > -0f;
         if (Input.GetButtonDown("Jump"))
         {
             velocity.y = jumpForce;
@@ -70,6 +79,17 @@ public class HeroMovement : MonoBehaviour
         position.x = Mathf.Clamp(position.x, leftEdge.x + 0.5f, rightEdge.x - 0.5f);
 
         rigidbody.MovePosition(position);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        {
+            if (transform.Dot(collision.transform, Vector2.up))
+            {
+                velocity.y = 0f; 
+            }
+        }
     }
 
 }
