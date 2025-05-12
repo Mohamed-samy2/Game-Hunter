@@ -37,6 +37,10 @@ public class HeroMovement : MonoBehaviour
     private void ApplyGravity()
     {
         bool falling = velocity.y < 0 || !Input.GetButton("Jump");
+        if (!falling)
+        {
+            jumping = true;
+        }
         float multiplier = falling ? 20f : 5f;
         velocity.y += gravity * multiplier * Time.deltaTime;
 
