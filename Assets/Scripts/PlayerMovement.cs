@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerControls playerControls;
     float direction = 0f;
     public float speed = 150f;
-    bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     bool isGrounded;
     public Transform groundCheck;
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        if (isGrounded)
+        if (isGrounded && playerRB != null)
         {
             noOfJumps = 0;
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocityX, jumpForce);
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (noOfJumps == 1)
+            if (noOfJumps == 1 && playerRB != null)
             {
                 playerRB.linearVelocity = new Vector2(playerRB.linearVelocityX, jumpForce);
                 noOfJumps++;
