@@ -48,4 +48,12 @@ public class Zombie : MonoBehaviour
         }
 
     }
+
+    public void PlayerDamage()
+    {
+        if (!GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().isInvisible)
+        {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().TakeDamage();
+        }
+    }
 }

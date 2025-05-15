@@ -10592,10 +10592,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mace
       objectReference: {fileID: 0}
-    - target: {fileID: 5004403354147305237, guid: 4916f0415928c2847becedb6ae2f6d57, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 8420428713824326047, guid: 4916f0415928c2847becedb6ae2f6d57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
@@ -10693,10 +10689,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8106243260197011593, guid: acbe8ebf388434b44b384f5381128c2d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10769,7 +10761,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6682278528934223218, guid: e5a1461dc56ed624da66d29a0ade55ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6682278528934223218, guid: e5a1461dc56ed624da66d29a0ade55ee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10810,10 +10802,6 @@ PrefabInstance:
     - target: {fileID: 7764197341096855626, guid: e5a1461dc56ed624da66d29a0ade55ee, type: 3}
       propertyPath: m_Name
       value: Zombie
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764197341096855626, guid: e5a1461dc56ed624da66d29a0ade55ee, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8502723261770009604, guid: e5a1461dc56ed624da66d29a0ade55ee, type: 3}
       propertyPath: m_AnchorMax.y
