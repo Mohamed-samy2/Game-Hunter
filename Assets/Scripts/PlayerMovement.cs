@@ -1,5 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float direction = 0f;
     public float speed = 150f;
     public bool isFacingRight = true;
+    private new Camera camera;
 
     bool isGrounded;
     public Transform groundCheck;
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         };
 
         playerControls.Land.Jump.performed += context => Jump();
-        
+        camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -41,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
         if (isFacingRight && direction < 0 || !isFacingRight && direction > 0) {
             Flip();
         }
+
+        Vector2 position = playerRB.position;
+        Vector2 leftEdge = camera.ScreenToWorldPoint(Vector2.zero);
+        Vector2 rightEdge = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        position.x = Mathf.Clamp(position.x, leftEdge.x + 0.8f, rightEdge.x - 0.8f);
+        playerRB.position = position;
     }
 
     void Flip()
