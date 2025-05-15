@@ -8,7 +8,10 @@ public class idleZombie : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         borderCheck = animator.GetComponent<Zombie>().borderCheck;
 
     }
@@ -16,13 +19,13 @@ public class idleZombie : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Physics2D.Raycast(borderCheck.position, Vector2.right, 2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false)
+        if (Physics2D.Raycast(borderCheck.position, Vector2.right, 2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false || Physics2D.Raycast(borderCheck.position, Vector2.down, 2) == false)
         {
             return;
         }
         float distance = Vector2.Distance(target.position,animator.transform.position);
 
-        if(distance < 7)
+        if(distance < 5)
         {
             animator.SetBool("isChasing",true);
         }

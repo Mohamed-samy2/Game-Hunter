@@ -28,7 +28,7 @@ public class PlayerShoot : MonoBehaviour
 
                 go.GetComponent<Rigidbody2D>().AddForce(Vector2.left * force);
             }
-            Destroy(go, 3f);
+            Destroy(go, 1f);
         }
     }
 }
