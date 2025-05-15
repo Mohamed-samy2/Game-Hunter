@@ -12,7 +12,10 @@ public class Zombie : MonoBehaviour
     {
         zombieHealthBar.value = enemyHealth;
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(),GetComponent<Collider2D>()); 
+        if(target != null)
+        {
+            Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(),GetComponent<Collider2D>()); 
+        }
     }
 
     // Update is called once per frame
@@ -51,9 +54,9 @@ public class Zombie : MonoBehaviour
 
     public void PlayerDamage()
     {
-        if (!GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().isInvisible)
+        if (GameObject.FindGameObjectWithTag("Player") != null && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().isInvisible)
         {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().TakeDamage();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollision>().TakeDamage();
         }
     }
 }
