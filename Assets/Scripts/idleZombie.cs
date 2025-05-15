@@ -19,13 +19,13 @@ public class idleZombie : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Physics2D.Raycast(borderCheck.position, Vector2.right, 2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false || Physics2D.Raycast(borderCheck.position, Vector2.down, 2) == false)
+        if (Physics2D.Raycast(borderCheck.position, Vector2.right, 2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false || Physics2D.Raycast(borderCheck.position, Vector2.down, 1) == false)
         {
             return;
         }
         float distance = Vector2.Distance(target.position,animator.transform.position);
 
-        if(distance < 5)
+        if(distance < 7)
         {
             animator.SetBool("isChasing",true);
         }

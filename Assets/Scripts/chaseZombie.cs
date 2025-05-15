@@ -19,7 +19,7 @@ public class chaseZombie : StateMachineBehaviour
     {
        animator.transform.position = Vector2.MoveTowards(animator.transform.position, new Vector2(target.position.x,animator.transform.position.y),speedChasing * Time.deltaTime);
 
-        if (Physics2D.Raycast(borderCheck.position,Vector2.right,2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false || Physics2D.Raycast(borderCheck.position, Vector2.down, 2)==false)
+        if (Physics2D.Raycast(borderCheck.position,Vector2.right,2) && Physics2D.Raycast(borderCheck.position, Vector2.right, 2).collider.CompareTag("Player") == false || Physics2D.Raycast(borderCheck.position, Vector2.down, 1) == false)
         {
             animator.SetBool("isChasing", false);
         }
