@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -8,6 +9,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+        }
+
+        if (collision.tag.Equals("Zombie"))
+        {
+            collision.GetComponent<Zombie>().TakeDamage(25);
         }
     }
 }

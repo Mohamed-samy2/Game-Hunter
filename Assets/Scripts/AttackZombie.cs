@@ -8,7 +8,6 @@ public class AttackZombie : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

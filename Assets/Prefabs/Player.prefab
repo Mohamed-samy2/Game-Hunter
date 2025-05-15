@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 175
+  isFacingRight: 1
   groundCheck: {fileID: 5272830496690447095}
   groundLayer:
     serializedVersion: 2
@@ -289,3 +290,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6294836856504881878, guid: 5fe8db1acf053c348ba7257655341c01, type: 3}
   bulletHole: {fileID: 655793098336263349}
+  force: 400

@@ -1,13 +1,18 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Zombie : MonoBehaviour
 {
     Transform target;
     public Transform borderCheck;
+    public int enemyHealth= 100;
+    public Animator animator;
+    public Slider zombieHealthBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        zombieHealthBar.value = enemyHealth;
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(),GetComponent<Collider2D>()); 
     }
 
     // Update is called once per frame
@@ -20,6 +25,26 @@ public class Zombie : MonoBehaviour
         else
         {
             transform.localScale = new Vector2(-0.35f, 0.35f);
+        }
+
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        enemyHealth-= damageAmount;
+        zombieHealthBar.value = enemyHealth;
+ 
+        if (enemyHealth > 0)
+        {
+            animator.SetTrigger("Damage");
+
+        }
+        else
+        {
+            animator.SetTrigger("Death");
+            GetComponent<CapsuleCollider2D>().enabled = false;
+            this.enabled = false;
+            Destroy(gameObject, 2f);
         }
 
     }
