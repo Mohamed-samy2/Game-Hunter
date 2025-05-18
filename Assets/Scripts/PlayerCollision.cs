@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
 
             TakeDamage();
         }
+       
     }
 
     IEnumerator GetHurt()
@@ -18,9 +19,9 @@ public class PlayerCollision : MonoBehaviour
         GetComponent<Animator>().SetLayerWeight(1, 1);
         isInvisible = true;
         yield return new WaitForSeconds(2);
-        isInvisible = false; 
+        isInvisible = false;
         GetComponent<Animator>().SetLayerWeight(1, 0);
-        Physics2D.IgnoreLayerCollision(3, 7,false);
+        Physics2D.IgnoreLayerCollision(3, 7, false);
 
     }
 
@@ -35,6 +36,14 @@ public class PlayerCollision : MonoBehaviour
         else
         {
             StartCoroutine(GetHurt());
+        }
+    }
+    public void UpdateHealth()
+    {
+        
+        if (HealthManager.health < 4)
+        {
+            HealthManager.health++;
         }
     }
 }
