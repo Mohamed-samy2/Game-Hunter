@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag.Equals("Enemy"))
         {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            //Destroy(collision.gameObject);
+            Destroy(gameObject,2f);
         }
 
         if (collision.tag.Equals("Zombie"))

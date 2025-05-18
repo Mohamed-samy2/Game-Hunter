@@ -239,7 +239,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 5
+  jumpForce: 7
   playerRB: {fileID: 628113004572538748}
   animator: {fileID: 6233107216127735113}
 --- !u!95 &6233107216127735113
