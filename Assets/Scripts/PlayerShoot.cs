@@ -20,8 +20,11 @@ public class PlayerShoot : MonoBehaviour
         if (bullet != null && bulletHole != null)
         {
             GameObject go = Instantiate(bullet, bulletHole.position, bullet.transform.rotation);
-            if (GetComponent<PlayerMovement>().isFacingRight) {
+            if (GetComponent<PlayerMovement>().isFacingRight)
+            {
+                AudioManager.instance.Play("Shoot");
                 go.GetComponent<Rigidbody2D>().AddForce(Vector2.right * force);
+                
             }
             else
             {

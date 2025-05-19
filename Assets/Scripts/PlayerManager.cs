@@ -5,11 +5,14 @@ public class PlayerManager : MonoBehaviour
 {
     public static bool isGameOver;
     public GameObject gameOverScreen;
-
+    public static bool isGameWin;
+    public GameObject gameWonScreen;
     private void Awake()
     {
         isGameOver = false;
         gameOverScreen.SetActive(false);
+        isGameWin = false;
+        gameWonScreen.SetActive(false);
     }
 
     private void Update()
@@ -17,6 +20,10 @@ public class PlayerManager : MonoBehaviour
         if (isGameOver)
         {
             gameOverScreen.SetActive(true);
+        }
+        if (isGameWin)
+        {
+            gameWonScreen.SetActive(true);
         }
     }
 

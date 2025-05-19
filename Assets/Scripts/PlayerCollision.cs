@@ -10,6 +10,13 @@ public class PlayerCollision : MonoBehaviour
 
             TakeDamage();
         }
+        if (collision.transform.tag.Equals("Door"))
+        {
+
+             PlayerManager.isGameWin = true;
+             gameObject.SetActive(false);
+            //  Destroy(gameObject);
+        }
        
     }
 
