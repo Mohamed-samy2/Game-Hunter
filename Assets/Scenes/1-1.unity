@@ -6255,7 +6255,7 @@ MonoBehaviour:
   - name: Shoot
     clip: {fileID: 8300000, guid: 792c8817bd6c149bea543ea68c88fb96, type: 3}
     mixer: {fileID: 0}
-    volume: 0.4
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -6278,6 +6278,20 @@ MonoBehaviour:
     mixer: {fileID: 0}
     volume: 0.7
     pitch: 0.7
+    loop: 0
+    source: {fileID: 0}
+  - name: ZombieScream
+    clip: {fileID: 8300000, guid: b9c1b10f4e74143e58d50987cf044457, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDamage
+    clip: {fileID: 8300000, guid: 3259bcb6e3d1b4798963eb7989776a4c, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &857191448

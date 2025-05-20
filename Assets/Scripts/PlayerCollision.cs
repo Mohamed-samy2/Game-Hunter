@@ -43,6 +43,7 @@ public class PlayerCollision : MonoBehaviour
         else
         {
             StartCoroutine(GetHurt());
+            AudioManager.instance.Play("PlayerDamage");
         }
     }
     public void UpdateHealth()
