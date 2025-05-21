@@ -27,8 +27,8 @@ public class PlayerShoot : MonoBehaviour
                 
             }
             else
-            {
-
+            { 
+                AudioManager.instance.Play("Shoot");
                 go.GetComponent<Rigidbody2D>().AddForce(Vector2.left * force);
             }
             Destroy(go, 1f);
