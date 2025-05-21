@@ -28,7 +28,7 @@ public class AudioToggleButton : MonoBehaviour
     {
         if (buttonImage == null)
         {
-            Debug.LogWarning("Button Image is not assigned!");
+            //Debug.LogWarning("Button Image is not assigned!");
             return;
         }
 
