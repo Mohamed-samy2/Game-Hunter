@@ -3,7 +3,7 @@ using UnityEngine;
 public class idleZombie : StateMachineBehaviour
 {
 
-    Transform target;
+    Transform target; // player
     Transform borderCheck;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class chaseZombie : StateMachineBehaviour
 {
 
-    Transform target;
+    Transform target; //player
     public float speedChasing = 3f;
     Transform borderCheck;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

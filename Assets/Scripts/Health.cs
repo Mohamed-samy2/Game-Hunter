@@ -9,8 +9,8 @@ public class Health : MonoBehaviour
             // collision.GetComponent<PlayerCollision>().UpdateHealth();
             AudioManager.instance.Play("HealthCollect");
 
-            Debug.Log("health when trigger occurs");
-            Debug.Log(HealthManager.health);
+            //Debug.Log("health when trigger occurs");
+            //Debug.Log(HealthManager.health);
 
             if (HealthManager.health < 4)
             {

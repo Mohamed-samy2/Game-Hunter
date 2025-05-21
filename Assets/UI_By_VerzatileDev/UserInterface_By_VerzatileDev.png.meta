@@ -312,6 +312,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1934,7 +1947,80 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UserInterface_By_VerzatileDev_0: 3610909566503766002
+      UserInterface_By_VerzatileDev_1: -8434137514212060348
+      UserInterface_By_VerzatileDev_10: -8526835350813851757
+      UserInterface_By_VerzatileDev_11: -4681843342377718675
+      UserInterface_By_VerzatileDev_12: 2239131891242287899
+      UserInterface_By_VerzatileDev_13: -1754732657559604303
+      UserInterface_By_VerzatileDev_14: 3761636913962343607
+      UserInterface_By_VerzatileDev_15: -7354024008586176834
+      UserInterface_By_VerzatileDev_16: -6568701103072930482
+      UserInterface_By_VerzatileDev_17: 1966308322364146119
+      UserInterface_By_VerzatileDev_18: -6159749267561365961
+      UserInterface_By_VerzatileDev_19: 460103112898762272
+      UserInterface_By_VerzatileDev_2: -8798412769184818152
+      UserInterface_By_VerzatileDev_20: -952150868629568029
+      UserInterface_By_VerzatileDev_21: -2739011212378827166
+      UserInterface_By_VerzatileDev_22: 7856316834953786852
+      UserInterface_By_VerzatileDev_23: 7918544992605774305
+      UserInterface_By_VerzatileDev_24: 8558002010433608094
+      UserInterface_By_VerzatileDev_25: -7219329450953629581
+      UserInterface_By_VerzatileDev_26: 4129826482245898904
+      UserInterface_By_VerzatileDev_27: -1271215885026984585
+      UserInterface_By_VerzatileDev_28: 6894399970081393276
+      UserInterface_By_VerzatileDev_29: -668867633871788360
+      UserInterface_By_VerzatileDev_3: -3537697408570411197
+      UserInterface_By_VerzatileDev_30: -6986773322976514833
+      UserInterface_By_VerzatileDev_31: 3650889057511042427
+      UserInterface_By_VerzatileDev_32: 4009109107593630966
+      UserInterface_By_VerzatileDev_33: 4647193806868239142
+      UserInterface_By_VerzatileDev_34: -534102022303603317
+      UserInterface_By_VerzatileDev_35: 5394029279677273400
+      UserInterface_By_VerzatileDev_36: 2450007223539348082
+      UserInterface_By_VerzatileDev_37: 42186869876465987
+      UserInterface_By_VerzatileDev_38: 1193765413882570606
+      UserInterface_By_VerzatileDev_39: -7947638863535408673
+      UserInterface_By_VerzatileDev_4: 173246945052574338
+      UserInterface_By_VerzatileDev_40: -4908918557952620347
+      UserInterface_By_VerzatileDev_41: -5187342480097094617
+      UserInterface_By_VerzatileDev_42: -3505895468768579127
+      UserInterface_By_VerzatileDev_43: 8185798046819829272
+      UserInterface_By_VerzatileDev_44: 8532208690931150820
+      UserInterface_By_VerzatileDev_45: 8459318715945230813
+      UserInterface_By_VerzatileDev_46: -2827505955542765917
+      UserInterface_By_VerzatileDev_47: 1773342621327447122
+      UserInterface_By_VerzatileDev_48: 6473661325808235892
+      UserInterface_By_VerzatileDev_49: -7865342390151738719
+      UserInterface_By_VerzatileDev_5: -1179587747442594175
+      UserInterface_By_VerzatileDev_50: -1969416356558609841
+      UserInterface_By_VerzatileDev_51: 448269204844558488
+      UserInterface_By_VerzatileDev_52: 1476390724489774107
+      UserInterface_By_VerzatileDev_53: 7183537617136685917
+      UserInterface_By_VerzatileDev_54: -3335570796359986887
+      UserInterface_By_VerzatileDev_55: -8201662287055923188
+      UserInterface_By_VerzatileDev_56: 2322583998661134161
+      UserInterface_By_VerzatileDev_57: 3820801908198988232
+      UserInterface_By_VerzatileDev_58: -7598639123470949065
+      UserInterface_By_VerzatileDev_59: 3701678119723881485
+      UserInterface_By_VerzatileDev_6: -2258837909878874750
+      UserInterface_By_VerzatileDev_60: -2439272254598357556
+      UserInterface_By_VerzatileDev_61: -115800166870338256
+      UserInterface_By_VerzatileDev_62: -123620397870691650
+      UserInterface_By_VerzatileDev_63: 2037345068404931337
+      UserInterface_By_VerzatileDev_64: -1757568385609277877
+      UserInterface_By_VerzatileDev_65: 8387854055454799002
+      UserInterface_By_VerzatileDev_66: -6323579925773215621
+      UserInterface_By_VerzatileDev_67: 2312926600753904656
+      UserInterface_By_VerzatileDev_68: -8405876843718527011
+      UserInterface_By_VerzatileDev_69: 8710748622996106940
+      UserInterface_By_VerzatileDev_7: -6056966257424175356
+      UserInterface_By_VerzatileDev_70: -2606992116209110481
+      UserInterface_By_VerzatileDev_71: -8502887170816332266
+      UserInterface_By_VerzatileDev_72: -5730886429820051284
+      UserInterface_By_VerzatileDev_8: 8960818398032846636
+      UserInterface_By_VerzatileDev_9: -5087011620924748547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

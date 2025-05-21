@@ -16,9 +16,9 @@ public class HealthManager : MonoBehaviour
     {
         if (health > 4)
         {
-                health = 3;
+                health = 4;
         }
-        Debug.Log("health before update"+health);
+        //Debug.Log("health before update"+health);
 
         foreach (Image img in hearts)
         {
@@ -27,10 +27,10 @@ public class HealthManager : MonoBehaviour
 
         for (int i = 0; i < health; i++)
         {  
-            Debug.Log("health at ");
-            Debug.Log(i);
-            Debug.Log("health before update");
-            Debug.Log(health);
+            //Debug.Log("health at ");
+            //Debug.Log(i);
+            //Debug.Log("health before update");
+            //Debug.Log(health);
             hearts[i].sprite = fullHeart;
         }
     }
